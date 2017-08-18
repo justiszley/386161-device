@@ -7,30 +7,29 @@
 	<body>
 		<header class="main-header">
 			<div class="header-logo">
-				<a>
-					<img src="" alt="Логотип магазина Device">
-				</a>
+				<img src="" alt="Логотип магазина Device">
 			</div>
 
 			<nav class="header-navigation">
 				<div class="upper-part">
 					<form class="site-searching-form">
+						<label class="visually-hidden" for="site-searching-field">Поиск по сайту</label>
+						<input id="site-searching-field" type="text" name="site-searching" placeholder="Найти по сайту">	
+
 						<button class="btn site-searching-btn">
 							<span class="visually-hidden">Найти</span>
-						</button>
-
-						<label class="visually-hidden" for="site-searching-field">Поиск по сайту</label>
-
-						<input id="site-searching-field" type="text" name="site-searching" placeholder="Найти по сайту">				
+						</button>			
 					</form>
 
 					<ul class="header-user-navigation">
 						<li>
 							<a class="log-in" href="#">Войти</a>
 						</li>
+
 						<li>
 							<a class="compare" href="#">Сравнить</a>
 						</li>
+
 						<li>
 							<a class="basket" href="#">Корзина</a>
 						</li>
@@ -99,7 +98,7 @@
 								<p>Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 							</section>
 
-							<a class="btn more-information-btn" href="#">Подробнее</a>
+							<a class="btn more-information-btn" href="#"><span>Подробнее</span></a>
 
 							<ul class="slider-item-features">
 								<li class="slider-item-features-item">
@@ -253,15 +252,21 @@
 					<div class="service-tabs-item">
 						<ul class="services-list">
 							<li class="services-item">
-								<button type="button">Доставка</button>
+								<button type="button">
+									<span>Доставка</span>
+								</button>
 							</li>
 
 							<li class="services-item">
-								<button type="button">Гарантия</button>
+								<button type="button">
+									<span>Гарантия</span>
+								</button>
 							</li>
 
 							<li class="services-item">
-								<button type="button">Кредит</button>
+								<button type="button">
+									<span>Кредит</span>
+								</button>
 							</li>
 						</ul>
 					</div>
@@ -331,7 +336,7 @@
 					<li>ЖелДорЭкспедиция</li>
 				</ul>
 
-				<a href="#" class="btn about-us-btn">Подробнее о нас</a>
+				<a href="#" class="btn about-us-btn"><span>Подробнее о нас</span></a>
 			</section>
 
 			<section class="contacts">
@@ -343,7 +348,7 @@
 
 				<button type="button"><img src="#" alt="Расположение офиса &#34;Девайс&#34; на карте" width="565" height="220"></button>
 
-				<button type="button" class="btn write-us-btn">Напишите нам</button>
+				<button class="btn write-us-btn" type="button"><span>Напишите нам</span></button>
 			</section>
 		</main>
 
@@ -412,16 +417,12 @@
 				</div>
 					
 				<div class="form-row">
-					<div class="form-item">
-						<label for="lettet-text-field">Текст письма</label>
-						<input id="lettet-text-field" type="text" name="text" placeholder="В свободной форме">
-					</div>
+					<label for="lettet-text-field">Текст письма</label>
+					<input id="lettet-text-field" type="text" name="text" placeholder="В свободной форме">
 				</div>
 					
 				<div class="form-row">
-					<div>
-						<button class="btn write-us-btn" type="submit">Отправить</button>
-					</div>
+					<button class="btn write-us-btn" type="submit">Отправить</button>
 				</div>								
 			</form>
 
