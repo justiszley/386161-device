@@ -1,21 +1,21 @@
 body {
 	font-size: 15px;
-	line-height: 30px;
+	line-height: 1.5;
 	color: #464646;
 	font-weight: normal;
 	font-family: OpenSans, sans-serif;
 }
 
-h1.page-title {
+.page-title {
 	font-size: 47px;
-	color: #000000;
+	color: #000;
 	font-weight: normal;
 	font-family: Gilroy, sans-serif;
 }
 
-h3.goods-categories-title {
+.goods-categories-title {
 	font-size: 18px;
-	color: #000000;
+	color: #000;
 	font-weight: normal;
 	font-family: Gilroy, sans-serif;
 }

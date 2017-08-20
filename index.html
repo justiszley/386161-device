@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<meta charset="utf-8">
 		<title>Девайс</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 		<header class="main-header">
 			<div class="header-logo">
-				<img src="" alt="Логотип магазина Device">
+				<img src="img/main-logo.png" alt="Логотип магазина Device" width="164" height="36">
 			</div>
 
-			<nav class="header-navigation">
-				<div class="upper-part">
+			<div class="header-navigation">
+				<div class="header-upper-part">
 					<form class="site-searching-form">
 						<label class="visually-hidden" for="site-searching-field">Поиск по сайту</label>
 						<input id="site-searching-field" type="text" name="site-searching" placeholder="Найти по сайту">	
@@ -37,38 +37,34 @@
 					</ul>
 				</div>
 
-				<div class="header-menu">
-					<div class="header-lower-part">
-						<section class="catalog header-menu__item">
-							<h2 class="visually-hidden">Каталог товаров</h2>
-							<button class="catalog-btn" type="button">Каталог товаров</button>
-						</section>
+				<nav class="header-lower-part header-menu">
+					<ul>
+						<li>
+							<button class="catalog-btn">Каталог товаров</button>
 
-						<ul class="header-services header-menu__item">
-							<li class="btn" href="#">Доставка</li>
-							<li class="btn" href="#">Гарантия</li>
-							<li class="btn" href="#">Контакты</li>
-						</ul>
-					</div>
+							<div class="visually-hidden header-menu-dropdown">
+								<ul>
+									<li><a href="#">Виртуальная реальность</a></li>
+									<li><a href="catalog.html">Моноподы для селфи</a></li>
+									<li><a href="#">Экшн-камеры</a></li>
+								</ul>
 
-					<div class="visually-hidden header-menu__dropdown">
-						<ul>
-							<li>Виртуальная реальность</li>
-							<li>Моноподы для селфи</li>
-							<li>Экшн-камеры</li>
-						</ul>
+								<ul>
+									<li><a href="#">Фитнес-браслеты</a></li>
+									<li><a href="#">Умные часы</a></li>
+								</ul>
 
-						<ul>
-							<li>Фитнес-браслеты</li>
-							<li>Умные часы</li>
-						</ul>
-
-						<ul>
-							<li>Квадрокоптеры</li>
-						</ul>
-					</div>
-				</div>						
-			</nav>
+								<ul>
+									<li><a href="#">Квадрокоптеры</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="btn"><a href="#">Доставка</a></li>
+						<li class="btn"><a href="#">Гарантия</a></li>
+						<li class="btn"><a href="#">Контакты</a></li>
+					</ul>
+				</nav>						
+			</div>
 		</header>
 
 		<main>
@@ -355,13 +351,13 @@
 
 		<footer class="main-footer">
 			<div class="wrapper">
-				<section class="footer-item">
-					<img src="" alt="Логотип магазина Device">
+				<div class="footer-item">
+					<img class="footer-logo" src="img/main-logo.png" alt="Логотип магазина Device" width="164" height="36">
 
 					<address>г. Москва, ул. Строителей, 15</address>
-				</section>
+				</div>
 
-				<section class="footer-item">
+				<div class="footer-item">
 					<ul class="footer-services-list">
 						<li class="footer-services-item">
 							<a href="#">Доставка</a>
@@ -383,9 +379,9 @@
 					
 						<a href="#"><span class="visually-hidden">Twitter</span></a>
 					</nav>		
-				</section>
+				</div>
 
-				<section class="footer-item">
+				<div class="footer-item">
 					<nav class="footer-navigation">
 						<a class="log-in" href="#">Войти</a>
 						<a class="compare" href="#">Сравнить</a>
@@ -397,7 +393,7 @@
 					</div>
 
 					<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-html.svg" alt="Логотип &#34;HTML Academy&#34;"></a>
-				</section>
+				</div>
 			</div>
 		</footer>
 
