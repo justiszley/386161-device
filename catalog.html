@@ -3,43 +3,34 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Моноподы для селфи</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 		<header class="main-header">
 			<div class="header-logo">
-				<a href="index.html">
+				<a class="logo" href="index.html">
 					<img src="img/main-logo.png" alt="Логотип магазина Device" width="164" height="36">
 				</a>
 			</div>
 
 			<div class="header-navigation">
-				<div class="upper-part">
+				<div class="header-upper-part">
 					<form class="site-searching-form">
 						<label class="visually-hidden" for="site-searching-field">Поиск по сайту</label>
-						<input id="site-searching-field" type="text" name="site-searching" placeholder="Найти по сайту">	
+						<input class="site-searching-field" id="site-searching-field" type="search" name="site-searching" placeholder="Поиск по сайту">	
 
-						<button class="btn site-searching-btn">
-							<span class="visually-hidden">Найти</span>
+						<button class="site-searching-btn">
+							<span>Найти</span>
 						</button>			
 					</form>
 
 					<ul class="header-user-navigation">
-						<li>
-							<a class="user-profile" href="#">Валентин Петухов</a>
-						</li>
-
-						<li>
-							<a class="log-out" href="#">Выйти</a>
-						</li>
-
-						<li>
-							<a class="compare" href="#">Сравнить</a>
-						</li>
-
-						<li>
-							<a class="basket" href="#">Корзина</a>
-						</li>
+						<li><a class="user-profile" href="#">Валентин Петухов</a></li>
+						<li><a class="log-out" href="#">Выйти</a></li>
+						<li><a class="compare" href="#">Сравнить</a></li>
+						<li><a class="basket" href="#">Корзина</a></li>
 					</ul>
 				</div>
 
@@ -65,9 +56,9 @@
 								</ul>
 							</div>
 						</li>
-						<li class="btn"><a href="#">Доставка</a></li>
-						<li class="btn"><a href="#">Гарантия</a></li>
-						<li class="btn"><a href="#">Контакты</a></li>
+						<li><a href="#">Доставка</a></li>
+						<li><a href="#">Гарантия</a></li>
+						<li><a href="#">Контакты</a></li>
 					</ul>
 				</nav>						
 			</div>
@@ -84,9 +75,9 @@
 
 			<div>
 				<aside class="filters">
-					<h2>Фильтр:</h2>
+					<h2 class="catalog-section-name">Фильтр:</h2>
 
-					<form class="filter" action="#" method="get">
+					<form class="filters-form" action="#" method="get">
 						<fieldset>
 							<legend>Стоимость</legend>
 
@@ -148,35 +139,35 @@
 					<h2 class="visually-hidden">Товары</h2>
 
 					<div class="goods-sorting">
-						<span>Сортировка:</span>
+						<span class="catalog-section-name">Сортировка:</span>
 
 						<form action="#" method="get">
-							<ul class="first-sorter-list">
-								<li class="first-sorter-item">
-									<input id="filter-price" class="visually-hidden" type="radio" name="first-sorter" value="filter-price">
+							<ul class="word-sorter-list">
+								<li class="word-sorter-item">
+									<input id="filter-price" class="visually-hidden" type="radio" name="word-sorter" value="filter-price" checked>
 									<label for="filter-price">По цене</label>
 								</li>
 
-								<li class="first-sorter-item">
-									<input id="filter-type" class="visually-hidden" type="radio" name="first-sorter" value="filter-type">
+								<li class="word-sorter-item">
+									<input id="filter-type" class="visually-hidden" type="radio" name="word-sorter" value="filter-type">
 									<label for="filter-type">По типу</label>
 								</li>
 
-								<li class="first-sorter-item">
-									<input id="filter-fame" class="visually-hidden" type="radio" name="first-sorter" value="filter-fame">
+								<li class="word-sorter-item">
+									<input id="filter-fame" class="visually-hidden" type="radio" name="word-sorter" value="filter-fame">
 									<label for="filter-fame">По популярности</label>
 								</li>
 							</ul>
 
-							<ul class="second-sorter-list">
-								<li class="second-sorter-item">
-									<input id="sign-up" class="visually-hidden" type="radio" name="second-sorter" value="up">
-									<label for="sign-up"><span class="visually-hidden">Стрелочка вверх</span></label>
+							<ul class="triangle-sorter-list">
+								<li class="triangle-sorter-item">
+									<input id="sign-up" class="visually-hidden" type="radio" name="triangle-sorter" value="up">
+									<label class="sorting-triangle" for="sign-up"><span class="visually-hidden">Стрелочка вверх</span></label>
 								</li>
 
-								<li class="second-sorter-item">
-									<input id="sign-down" class="visually-hidden" type="radio" name="second-sorter" value="down">
-									<label for="sign-down"><span class="visually-hidden">Стрелочка вниз</span></label>
+								<li class="triangle-sorter-item">
+									<input id="sign-down" class="visually-hidden" type="radio" name="triangle-sorter" value="down" checked>
+									<label class="sorting-triangle" for="sign-down"><span class="visually-hidden">Стрелочка вниз</span></label>
 								</li>
 							</ul>
 						</form>
@@ -193,8 +184,8 @@
 											<span>В корзину</span>
 										</button>
 
-										<button class="btn" type="button">
-											Добавить к сравнению
+										<button class="add-to-compare" type="button">
+											<span>Добавить к сравнению</span>
 										</button>
 									</div>
 								</div>
@@ -221,8 +212,8 @@
 											<span>В корзину</span>
 										</button>
 
-										<button class="btn" type="button">
-											Добавить к сравнению
+										<button class="add-to-compare" type="button">
+											<span>Добавить к сравнению</span>
 										</button>
 									</div>
 								</div>
@@ -245,12 +236,12 @@
 									<img src="img/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
 
 									<div class="hovered-item">
-										<button class="btn" type="button">
+										<button class="btn add-to-basket" type="button">
 											<span>В корзину</span>
 										</button>
 
-										<button class="btn" type="button">
-											Добавить к сравнению
+										<button class="add-to-compare" type="button">
+											<span>Добавить к сравнению</span>
 										</button>
 									</div>
 								</div>
@@ -277,8 +268,8 @@
 											<span>В корзину</span>
 										</button>
 
-										<button class="btn" type="button">
-											Добавить к сравнению
+										<button class="add-to-compare" type="button">
+											<span>Добавить к сравнению</span>
 										</button>
 									</div>
 								</div>
@@ -316,8 +307,8 @@
 		<footer class="main-footer">
 			<div class="wrapper">
 				<div class="footer-item">
-					<a href="index.html">
-						<img class="footer-logo" src="img/main-logo.png" alt="Логотип магазина Device" width="164" height="36">
+					<a class="footer-logo logo" href="index.html">
+						<img class="footer-logo" src="img/footer-logo.png" alt="Логотип магазина Device" width="164" height="36">
 					</a>
 
 					<address>г. Москва, ул. Строителей, 15</address>
@@ -348,17 +339,17 @@
 				</div>
 
 				<div class="footer-item">
-					<nav class="footer-navigation">
-						<a class="log-in" href="#">Войти</a>
-						<a class="compare" href="#">Сравнить</a>
-						<a class="basket" href="#">Корзина</a>
-					</nav>
+					<ul class="footer-user-navigation">
+						<li><a class="log-in" href="#">Войти</a></li>
+						<li><a class="compare" href="#">Сравнить</a></li>
+						<li><a class="basket" href="#">Корзина</a></li>
+					</ul>
 
 					<div class="footer-phone-number">
 						Тел.: <a href="tel:+74954959595">+7(495)495-95-95</a>
 					</div>
 
-					<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-html.svg" alt="Логотип &#34;HTML Academy&#34;"></a>
+					<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-html.svg" alt="Логотип &#34;HTML Academy&#34;"></a>
 				</div>
 			</div>
 		</footer>
