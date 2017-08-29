@@ -3,63 +3,65 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Девайс</title>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- Подключил на время локально в файле css -->
+
+		<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet"> -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<header class="main-header">
-			<div class="header-logo">
-				<img src="img/main-logo.png" alt="Логотип магазина Device" width="164" height="36">
-			</div>
+		<div class="wrapper">
+			<header class="main-header">
+				<img class="header-logo" src="img/main-logo.png" alt="Логотип магазина Device" width="164" height="36">
 
-			<div class="header-navigation">
-				<div class="header-upper-part">
-					<form class="site-searching-form">
-						<label class="visually-hidden" for="site-searching-field">Поиск по сайту</label>
-						<input class="site-searching-field" id="site-searching-field" type="text" name="site-searching" placeholder="Поиск по сайту">	
+				<div class="header-navigation">
+					<div class="header-upper-part">
+						<form class="site-searching-form">
+							<label class="visually-hidden" for="site-searching-field">Поиск по сайту</label>
+							<input class="site-searching-field" id="site-searching-field" type="text" name="site-searching" placeholder="Поиск по сайту">	
 
-						<button class="site-searching-btn">
-							<span class="visually-hidden"><span>Найти</span></span>
-						</button>			
-					</form>
+							<button class="site-searching-btn">
+								Найти
+							</button>			
+						</form>
 
-					<ul class="header-user-navigation">
-						<li><a class="log-in" href="#">Войти</a></li>
-						<li><a class="compare" href="#">Сравнить</a></li>
-						<li><a class="basket" href="#">Корзина</a></li>
-					</ul>
+						<ul class="header-user-navigation">
+							<li><a class="log-in" href="#">Войти</a></li>
+							<li><a class="compare" href="#">Сравнить</a></li>
+							<li><a class="basket" href="#">Корзина</a></li>
+						</ul>
+					</div>
+
+					<nav class="header-lower-part">
+						<ul class="header-menu">
+							<li>
+								<a class="catalog-btn uppercase" href="catalog.html">Каталог товаров</a>
+
+								<div class="header-menu-dropdown">
+									<ul>
+										<li><a href="#">Виртуальная реальность</a></li>
+										<li><a href="catalog.html">Моноподы для селфи</a></li>
+										<li><a href="#">Экшн-камеры</a></li>
+									</ul>
+
+									<ul>
+										<li><a href="#">Фитнес-браслеты</a></li>
+										<li><a href="#">Умные часы</a></li>
+									</ul>
+
+									<ul>
+										<li><a href="#">Квадрокоптеры</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="uppercase"><a href="#">Доставка</a></li>
+							<li class="uppercase"><a href="#">Гарантия</a></li>
+							<li class="uppercase"><a href="#">Контакты</a></li>
+						</ul>
+					</nav>						
 				</div>
-
-				<nav class="header-lower-part header-menu">
-					<ul>
-						<li>
-							<a class="catalog-btn" href="catalog.html">Каталог товаров</a>
-
-							<div class="visually-hidden header-menu-dropdown">
-								<ul>
-									<li><a href="#">Виртуальная реальность</a></li>
-									<li><a href="catalog.html">Моноподы для селфи</a></li>
-									<li><a href="#">Экшн-камеры</a></li>
-								</ul>
-
-								<ul>
-									<li><a href="#">Фитнес-браслеты</a></li>
-									<li><a href="#">Умные часы</a></li>
-								</ul>
-
-								<ul>
-									<li><a href="#">Квадрокоптеры</a></li>
-								</ul>
-							</div>
-						</li>
-						<li><a href="#">Доставка</a></li>
-						<li><a href="#">Гарантия</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-				</nav>						
-			</div>
-		</header>
+			</header>
+		</div>
 
 		<main>
 			<h1 class="page-title visually-hidden">Интернет-магазин Девайс</h1>
@@ -427,6 +429,7 @@
 
 		<div class="modal modal-map">
 			<h2 class="visually-hidden">Карта</h2>
+			<img src="img/big-map.jpg" alt="Адрес расположения офиса &#34;Девайс&#34;: улица Строителей, 15." width="960" height="559px">
 			<button type="button"><span class="visually-hidden">close</span></button>
 		</div>
 	</body>
