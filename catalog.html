@@ -8,64 +8,66 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 
-	<body>
-		<div class="wrapper">
-			<header class="main-header inner-page-header">
-				<a class="logo" href="index.html">
-					<img class="header-logo" src="img/content/main-logo.png" alt="Логотип магазина Device" width="164" height="36">
-				</a>
+	<body>				
+		<header>
+			<div class="global-width">
+				<div class="main-header-wrapper inner-page-header">
+					<a class="logo" href="index.html">
+						<img class="header-logo" src="img/content/main-logo.png" alt="Логотип магазина Device" width="164" height="36">
+					</a>
 
-				<div class="header-navigation">
-					<div class="header-upper-part">
-						<form class="site-searching-form">
-							<label class="visually-hidden" for="site-searching-field">Поиск по сайту</label>
-							<input class="site-searching-field" id="site-searching-field" type="search" name="site-searching" placeholder="Поиск по сайту">	
+					<div class="header-navigation">
+						<div class="header-upper-part">
+							<form class="site-searching-form">
+								<label class="visually-hidden" for="site-searching-field">Поиск по сайту</label>
+								<input class="site-searching-field" id="site-searching-field" type="search" name="site-searching" placeholder="Поиск по сайту">	
 
-							<button class="site-searching-btn">
-								Найти
-							</button>			
-						</form>
+								<button class="site-searching-btn">
+									Найти
+								</button>			
+							</form>
 
-						<ul class="header-user-navigation">
-							<li><a class="user-profile" href="#">Валентин Петухов</a></li>
-							<li><a class="log-out" href="#">Выйти</a></li>
-							<li><a class="compare" href="#">Сравнить</a></li>
-							<li><a class="basket" href="#">Корзина</a></li>
-						</ul>
+							<ul class="header-user-navigation">
+								<li><a class="user-profile" href="#">Валентин Петухов</a></li>
+								<li><a class="log-out" href="#">Выйти</a></li>
+								<li><a class="compare" href="#">Сравнить</a></li>
+								<li><a class="basket" href="#">Корзина</a></li>
+							</ul>
+						</div>
+
+						<nav class="header-lower-part">
+							<ul class="header-menu">
+								<li>
+									<a class="catalog-btn header-menu-item" href="catalog.html">Каталог товаров</a>
+
+									<div class="header-menu-dropdown">
+										<ul>
+											<li><a href="#">Виртуальная реальность</a></li>
+											<li><a href="catalog.html">Моноподы для селфи</a></li>
+											<li><a href="#">Экшн-камеры</a></li>
+										</ul>
+
+										<ul>
+											<li><a href="#">Фитнес-браслеты</a></li>
+											<li><a href="#">Умные часы</a></li>
+										</ul>
+
+										<ul>
+											<li><a href="#">Квадрокоптеры</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="header-menu-item"><a href="#">Доставка</a></li>
+								<li class="header-menu-item"><a href="#">Гарантия</a></li>
+								<li class="header-menu-item"><a href="#">Контакты</a></li>
+							</ul>
+						</nav>					
 					</div>
-
-					<nav class="header-lower-part">
-						<ul class="header-menu">
-							<li>
-								<a class="catalog-btn header-menu-item" href="catalog.html">Каталог товаров</a>
-
-								<div class="header-menu-dropdown">
-									<ul>
-										<li><a href="#">Виртуальная реальность</a></li>
-										<li><a href="catalog.html">Моноподы для селфи</a></li>
-										<li><a href="#">Экшн-камеры</a></li>
-									</ul>
-
-									<ul>
-										<li><a href="#">Фитнес-браслеты</a></li>
-										<li><a href="#">Умные часы</a></li>
-									</ul>
-
-									<ul>
-										<li><a href="#">Квадрокоптеры</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="header-menu-item"><a href="#">Доставка</a></li>
-							<li class="header-menu-item"><a href="#">Гарантия</a></li>
-							<li class="header-menu-item"><a href="#">Контакты</a></li>
-						</ul>
-					</nav>					
 				</div>
-			</header>		
-		</div>
+			</div>					
+		</header>
 
-		<main>
+		<main  class="main-content">
 			<div class="heading-wrapper">
 				<h1 class="page-title">Моноподы для селфи</h1>
 
@@ -76,14 +78,14 @@
 				</ul>
 			</div>
 
-			<div class="catalog-wrapper">
+			<div class="catalog-wrapper global-width">
 				<aside class="filters">
 					<div class="filters-heading-wrapper">
 						<h2 class="catalog-section-name">Фильтр:</h2>				
 					</div>
 
 					<form class="filters-form" action="#" method="get">
-						<fieldset>
+						<fieldset class="filters-cost-field">
 							<legend>Стоимость</legend>
 
 							<div class="range">
@@ -93,22 +95,22 @@
 							</div>
 						</fieldset>
 
-						<fieldset>
+						<fieldset class="filters-color-field">
 							<legend>Цвет</legend>
 
 							<ul>
 								<li>
 									<input class="visually-hidden filter-input filter-input-checkbox" id="checkbox-color-black" type="checkbox" name="black" checked>
-									<label for="checkbox-color-black">Чёрный</label>
+									<label for="checkbox-color-black">Черный</label>
 								</li>
 
 								<li>
-									<input class="visually-hidden filter-input filter-input-checkbox" id="checkbox-color-white" type="checkbox" name="white" checked>
+									<input class="visually-hidden filter-input filter-input-checkbox" id="checkbox-color-white" type="checkbox" name="white">
 									<label for="checkbox-color-white">Белый</label>
 								</li>
 
 								<li>
-									<input class="visually-hidden filter-input filter-input-checkbox" id="checkbox-color-blue" type="checkbox" name="blue">
+									<input class="visually-hidden filter-input filter-input-checkbox" id="checkbox-color-blue" type="checkbox" name="blue" checked>
 									<label for="checkbox-color-blue">Синий</label>
 								</li>
 
@@ -124,7 +126,7 @@
 							</ul>
 						</fieldset>
 
-						<fieldset>
+						<fieldset class="filters-bluetooth-field">
 							<legend>Bluetooth</legend>
 
 							<ul>
@@ -140,7 +142,7 @@
 							</ul>
 						</fieldset>
 
-						<button class="btn filter-btn"><span>Показать</span></button>
+						<button class="btn filters-btn"><span>Показать</span></button>
 					</form>
 				</aside>
 
@@ -183,8 +185,8 @@
 					</div>
 
 					<ul class="goods-list">
-						<li>
-							<article class="goods-item">
+						<li class="goods-item">
+							<article>
 								<div class="goods-img">
 									<img src="img/content/item-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
 
@@ -211,8 +213,8 @@
 							</article>
 						</li>
 
-						<li>
-							<article class="goods-item">
+						<li class="goods-item">
+							<article>
 								<div class="goods-img">
 									<img src="img/content/item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
 
@@ -239,8 +241,8 @@
 							</article>
 						</li>
 
-						<li>
-							<article class="goods-item">
+						<li class="goods-item">
+							<article>
 								<div class="goods-img">
 									<img src="img/content/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
 
@@ -261,14 +263,14 @@
 									</h3>
 
 									<span class="goods-price">
-										2 500 руб
+										2 500 руб.
 									</span>
 								</div>
 							</article>
 						</li>
 
-						<li>
-							<article class="goods-item">
+						<li class="goods-item">
+							<article>
 								<div class="goods-img sticker-new">
 									<img src="img/content/item-4.jpg" alt="Селфи-палка &#171;Следуй за мной&#187;" width="360" height="380">
 
@@ -297,7 +299,7 @@
 					</ul>
 
 					<div class="goods-navigation">
-						<a class="prev-page" href="#">Назад</a>
+						<a class="pagination-btn prev-page" href="#">Назад</a>
 
 						<ul class="pagination-list">
 							<li class="pagination-item pagination-item-current">1</li>
@@ -307,14 +309,14 @@
 							<li class="pagination-item">3</li>
 						</ul>
 
-						<a class="next-page" href="#">Вперёд</a>
+						<a class="pagination-btn next-page" href="#">Вперёд</a>
 					</div>					
 				</section>
 			</div>
-		</main>			
+		</main>	
 
 		<footer class="main-footer">
-			<div class="wrapper">
+			<div class="global-width">
 				<div class="main-footer-wrapper">
 					<div class="footer-item">
 						<img class="footer-logo" src="img/content/footer-logo.png" alt="Логотип магазина Device" width="164" height="36">
