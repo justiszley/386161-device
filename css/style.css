@@ -54,6 +54,7 @@ body {
 	line-height: 30px;
 	color: #000;
 	background-color: #fff;
+	min-width: 1200px;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 100;
 	display: flex;
@@ -261,7 +262,7 @@ a {
 .header-menu {
 	display: flex;
 	flex-wrap: wrap;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 800;
 	line-height: 1.2;
@@ -373,7 +374,7 @@ a {
 }
 
 .page-title {
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-weight: 800;
 	font-size: 47px;
 	letter-spacing: 0.01em;
@@ -518,7 +519,7 @@ a {
 	position: absolute;
 	top: -20px;
 	right: 48px;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 179.2px;
 	color: #fff;
 	font-weight: 800;
@@ -527,7 +528,7 @@ a {
 
 .slider-item-slogan {
 	position: relative;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 47px;
 	font-weight: 800;
 	line-height: 1.2;
@@ -545,7 +546,7 @@ a {
 .btn {
 	position: relative;
 	display: inline-block;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-weight: 800;
 	font-size: 18px;
 	line-height: 1.2;
@@ -615,7 +616,7 @@ a {
 }
 
 .feature-value {
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 36px;
 	line-height: 1.2;
 	margin-bottom: 10px;
@@ -633,7 +634,7 @@ a {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	line-height: 1.2;
 	font-weight: 800;
 
@@ -651,6 +652,10 @@ a {
 
 .goods-categories-item a {
 	display: block;
+}
+
+.goods-categories-title {
+	word-wrap: break-word;
 }
 
 .goods-categories-item:nth-child(1) a::before {background-image: url(../img/i/popular-1.svg);}
@@ -731,6 +736,10 @@ a {
 	color: #464646;
 }
 
+.services-radio {
+	visibility: hidden;
+}
+
 .services-btn-list,
 .services-list {
 	list-style: none;
@@ -741,6 +750,7 @@ a {
 .services-btn-list {
 	position: relative;
 	width: 285px;
+	margin-left: -23px;
 }
 
 .services-btn-list::after {
@@ -762,8 +772,9 @@ a {
 }
 
 .services-btn {
+	display: block;
 	position: relative;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-weight: 800;
 	font-size: 18px;
 	width: 160px;
@@ -780,6 +791,7 @@ a {
 .services-btn span {
 	position: relative;
 	z-index: 1;
+	line-height: 40px;
 }
 
 .services-btn::before {
@@ -793,23 +805,34 @@ a {
 	transition: all 0.5s;
 }
 
-.services-btn:focus {
-	width: 100%
-}
-
 .services-btn:hover::before {
 	top: 0;
 	bottom: 0;
 	transition: all 0.5s;
 }
 
-/*.services-btn:active {
-	color: rgba(0, 0, 0, 0.3);
-}*/
-/*
-.services-btn:active::before,*/
+.delivery-btn {
+	padding-left: 20px;
+}
 
-.services-btn:focus::before {
+.guarantee-btn {
+	padding-left: 25px;
+}
+
+.credit-btn {
+	padding-left: 38px;
+}
+
+#delivery:checked ~ .service-tabs-item .delivery-btn,
+#guarantee:checked ~ .service-tabs-item .guarantee-btn,
+#credit:checked ~ .service-tabs-item .credit-btn {
+	width: 100%;
+	color: #f7e184;
+}
+
+#delivery:checked ~ .service-tabs-item .delivery-btn::before,
+#guarantee:checked ~ .service-tabs-item .guarantee-btn::before,
+#credit:checked ~ .service-tabs-item .credit-btn::before {
 	background-color: black;
 	top: 0;
 	bottom: 0;
@@ -822,37 +845,57 @@ a {
 
 .services-list {
     position: relative;
+    width: 876px;
 	padding-left: 115px;
 }
 
 .service-title {
+	font-family: Gilroy, Arial, sans-serif;
+	font-weight: 800;
+	font-size: 47px;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
 	margin: 0;
 	margin-top: -10px;
 	margin-bottom: 25px;
 }
 
 .services-item {
+	position: absolute;
 	padding-right: 300px;
-	background-repeat: no-repeat;
-	background-position: 90% 180%;
+	opacity: 0;
 }
 
-.services-delivering {
-	background-image: url(../img/i/delivery.svg);	
+#delivery:checked ~ .service-tabs-item .services-delivering,
+#guarantee:checked ~ .service-tabs-item .services-guarantee,
+#credit:checked ~ .service-tabs-item .services-credit {
+	opacity: 1;
 }
 
-.services-guarantee {
-	background-image: url(../img/i/warranty.svg);	
+.services-delivering::after {
+	position: absolute;
+	top: 5px;
+	right: 65px;
+	content: url(../img/i/delivery.svg);
 }
 
-.services-credit {
-	background-image: url(../img/i/credit.svg);	
+.services-guarantee::after {
+	position: absolute;
+	top: -20px;
+	right: 45px;
+	content: url(../img/i/warranty.svg);	
 }
 
-.service-title,
+.services-credit::after {
+	position: absolute;
+	top: -20px;
+	right: 70px;
+	content: url(../img/i/credit.svg);
+}
+
 .about-us h2,
 .contacts h2 {
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-weight: 800;
 	font-size: 47px;
 	line-height: 1.2;
@@ -911,7 +954,7 @@ a {
 
 .fellows {
 	list-style: none;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-weight: 800;
 	font-size: 16px;
 	line-height: 40px;
@@ -983,7 +1026,7 @@ a {
 }
 
 .catalog-section-name {
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-weight: 800;
 	font-size: 16px;
 	letter-spacing: 0.2em;
@@ -1015,10 +1058,21 @@ a {
 }
 
 .filters-form legend {
-	font-family: Gilroy, sans-serif;
+	position: relative;
+	font-family: Gilroy, Arial, sans-serif;
 	font-weight: 800;
 	font-size: 18px;
 	line-height: 1.2;	
+}
+
+.filters-form legend::before {
+	content: "";
+	position: absolute;
+	top: -15px;
+	left: 0;
+	width: 201px;
+	height: 2px;
+	background-color: #000;
 }
 
 .filters-form .filters-cost-field {
@@ -1122,7 +1176,7 @@ a {
 	position: absolute;
     top: 20px;
     left: 5px;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 22.27px;
 	font-weight: 100;
@@ -1134,7 +1188,7 @@ a {
 	position: absolute;
     top: 20px;
     left: -20px;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 22.27px;
 	font-weight: 100;
@@ -1283,7 +1337,7 @@ a {
 	position: absolute;
 	top: 29px;
 	right: 27px;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-weight: 800;
 	font-size: 14px;
 	line-height: 14px;
@@ -1299,12 +1353,27 @@ a {
 }
 
 .hovered-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
 	top: 0;
 	background-color: rgba(238, 238, 238, 0.7);
 	width: 360px;
 	height: 380px;
 	visibility: hidden;
+}
+
+.add-to-basket {
+	width: 200px;
+	margin-top: 40px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.add-to-basket::before {
+	transition: none;
 }
 
 .goods-img:hover .hovered-item {
@@ -1332,7 +1401,7 @@ a {
 .goods-info {
 	display: flex;
 	justify-content: space-between;
-	font-family: Gilroy, sans-serif;	
+	font-family: Gilroy, Arial, sans-serif;	
 }
 
 .goods-title {
@@ -1345,6 +1414,7 @@ a {
 }
 
 .goods-price {
+	word-wrap: break-word;
 	font-weight: 100;
 	font-size: 16px;
 	line-height: 1.2;
@@ -1353,8 +1423,9 @@ a {
 
 .goods-navigation {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-weight: 800;
 	font-size: 16px;
 	line-height: 1.2;
@@ -1384,6 +1455,7 @@ a {
 
 .pagination-list {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	list-style: none;
 	padding: 0;
@@ -1450,7 +1522,7 @@ a {
 	padding: 0;
 	margin: 0;
 	margin-bottom: 65px;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 1.2;
 	letter-spacing: 0.2em;
@@ -1596,7 +1668,7 @@ a {
 	min-height: 553px;
 	margin: 50px auto;
 	padding: 99px 100px 90px;
-	font-family: Gilroy, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-weight: 800;
 	font-size: 18px;
 	line-height: 18px;
