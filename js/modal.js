@@ -1,10 +1,10 @@
-var writeUs = document.querySelector(".write-us-btn");
-var writeUsPopup = document.querySelector(".modal-write-us");
-var writeUsClose = document.querySelector(".modal-write-us .modal-close");
+var writeUs = document.querySelector(".js-write-us-btn");
+var writeUsPopup = document.querySelector(".js-modal-write-us");
+var writeUsClose = document.querySelector(".js-modal-write-us .js-modal-close");
 
-var	map = document.querySelector(".map-btn");
-var mapPopup = document.querySelector(".modal-map");
-var mapClose = document.querySelector(".modal-map .modal-close");
+var	map = document.querySelector(".js-map-btn");
+var mapPopup = document.querySelector(".js-modal-map");
+var mapClose = document.querySelector(".js-modal-map .js-modal-close");
 
 writeUs.addEventListener("click", function (evt) {
 	evt.preventDefault();
