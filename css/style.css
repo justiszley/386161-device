@@ -278,6 +278,7 @@ a .footer-logo:active
 
 .site-searching-btn:active
 {
+    visibility: visible;
     color: rgba(255, 255, 255, .3);
 }
 
