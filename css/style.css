@@ -1531,6 +1531,14 @@ a .footer-logo:active
     content: url(../img/i/checkbox-on.svg);
 }
 
+.filters-color-field input:checked + label:active::before {
+	content: url(../img/i/checkbox-off.svg);
+}
+
+.filters-color-field input:not(:checked) + label:active::before {
+	content: url(../img/i/checkbox-on.svg);
+}
+
 .filters-form .filters-bluetooth-field
 {
     margin-top: -15px;
@@ -1776,6 +1784,11 @@ a .footer-logo:active
 .word-sorter-list label:hover
 {
     opacity: .6;
+}
+
+.word-sorter-list label:active
+{
+    opacity: 1;
 }
 
 .word-sorter-list :checked + label
