@@ -70,9 +70,9 @@
 				<section class="recomendation">
 					<h2 class="visually-hidden">Рекомендации</h2>
 					<div class="slider">
-						<input class="slider-radio" id="slide1" type="radio" name="slide-selector" checked>
-						<input class="slider-radio" id="slide2" type="radio" name="slide-selector">
-						<input class="slider-radio" id="slide3" type="radio" name="slide-selector">	
+						<input class="slider-radio slide1-slider-radio" id="slide1" type="radio" name="slide-selector" checked>
+						<input class="slider-radio slide2-slider-radio" id="slide2" type="radio" name="slide-selector">
+						<input class="slider-radio slide3-slider-radio" id="slide3" type="radio" name="slide-selector">	
 
 						<ul class="slider-list">
 							<li class="slider-item slide1">
@@ -249,9 +249,9 @@
 						
 						<div class="service-tabs-wrapper">
 
-							<input class="services-radio" id="delivery" type="radio" name="services" checked>
-							<input class="services-radio" id="guarantee" type="radio" name="services">
-							<input class="services-radio" id="credit" type="radio" name="services">
+							<input class="services-radio delivery-services-radio" id="delivery" type="radio" name="services" checked>
+							<input class="services-radio guarantee-services-radio" id="guarantee" type="radio" name="services">
+							<input class="services-radio credit-services-radio" id="credit" type="radio" name="services">
 
 							<div class="service-tabs-item">
 								<ul class="services-btn-list">
@@ -366,9 +366,9 @@
 							<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 						</div>
 
-						<button class="map-btn js-map-btn" type="button"><img src="img/content/small-map.jpg" alt="Расположение офиса &#34;Девайс&#34; на карте: улица строителей, 15" width="560" height="222"></button>
+						<a class="map-btn js-map-btn" href="map.html" target="_blank"><img src="img/content/small-map.jpg" alt="Расположение офиса &#34;Девайс&#34; на карте: улица строителей, 15" width="560" height="222"></a>
 
-						<button class="btn write-us-btn js-write-us-btn" type="button"><span>Напишите нам</span></button>
+						<a class="btn write-us-btn js-write-us-btn" href="login.html" target="_blank"><span>Напишите нам</span></a>
 					</section>
 				</div>					
 			</div>
@@ -450,7 +450,7 @@
 					
 				<div class="form-row form-item">
 					<label for="lettet-text-field">Текст письма:</label>
-					<textarea id="lettet-text-field" name="text" required placeholder="В свободной форме"></textarea>
+					<textarea id="lettet-text-field" name="text" placeholder="В свободной форме"></textarea>
 				</div>
 					
 				<div class="form-row">
